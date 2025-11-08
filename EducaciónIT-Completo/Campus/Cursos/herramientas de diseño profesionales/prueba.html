@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Evaluación Final</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="quiz-container container py-4">
+    <h2 class="text-center mb-3">Evaluación Final</h2>
+    <p class="text-center">Tienes 5 minutos para completar el test. Para aprobar con nota máxima debes obtener al menos 7 puntos.</p>
+    <div class="text-center mb-3">
+      <span>Tiempo restante: </span><span id="timer">05:00</span>
+    </div>
+
+    <form id="quizForm">
+      <!-- Preguntas -->
+      <div class="question">
+        <p><strong>1. ¿Cuál es el objetivo principal del Diseño Responsivo en el diseño UI/UX?</strong></p>
+        <label><input type="radio" name="q1" value="Par"> a) Reducir la cantidad de código CSS utilizado en el desarrollo web.</label><br>
+        <label><input type="radio" name="q1" value="Impar"> b) Asegurar que la interfaz se adapte y se vea correctamente en diferentes tamaños de pantalla (escritorio, tablet, móvil).</label><br>
+        <label><input type="radio" name="q1" value="7"> c) Usar únicamente el diseño 'mobile-first' (móvil primero) para todos los proyectos.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>2. ¿Cuál es el principal beneficio de utilizar una Máscara de Capa en lugar de la Herramienta Borrador en la edición de imágenes (Módulo 2)?</strong></p>
+        <label><input type="radio" name="q2" value="correcta"> a) Asegura una edición completamente no destructiva, permitiendo modificar o revertir la ocultación de píxeles en cualquier momento.</label><br>
+        <label><input type="radio" name="q2" value="opcion2"> b) Permite reducir automáticamente el tamaño del archivo de imagen.</label><br>
+        <label><input type="radio" name="q2" value="opcion3"> c) Convierte la capa automáticamente en un Objeto Inteligente.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>3. ¿Qué modo de color es esencial para utilizar al preparar un diseño (como un logo o un folleto) para la impresión profesional? </strong></p>
+        <label><input type="radio" name="q3" value="Tupla"> a) RGB (Rojo, Verde, Azul).</label><br>
+        <label><input type="radio" name="q3" value="Lista"> b) CMYK (Cian, Magenta, Amarillo y Negro).</label><br>
+        <label><input type="radio" name="q3" value="Conjunto"> c) HEX (Hexadecimal).</label><br>
+      </div>
+
+      <div class="question">
+        <p><strong>4. En el contexto del diseño UX, ¿cuál de los siguientes términos se refiere al proceso de organizar y estructurar el contenido de un sitio web o aplicación para que los usuarios puedan encontrar la información fácilmente?</strong></p>
+        <label><input type="radio" name="q4" value="correcta"> a) Arquitectura de la Información (AI).</label><br>
+        <label><input type="radio" name="q4" value="opcion2"> b) Wireframing de Baja Fidelidad.</label><br>
+        <label><input type="radio" name="q4" value="opcion3"> c) Flujo de Usuario (User Flow).</label>
+      </div>
+
+      <div class="question">
+        <p><strong>5. ¿Cuál es el propósito primordial de un Sistema de Diseño (Design System) en un flujo de trabajo de diseño profesional avanzado (Módulo 5)?</strong></p>
+        <label><input type="radio" name="q5" value="correcta"> a) Garantizar la consistencia, la escalabilidad y la eficiencia en el diseño y desarrollo de productos digitales, usando componentes reutilizables y guías claras.</label><br>
+        <label><input type="radio" name="q5" value="opcion2"> b) Crear automáticamente todos los prototipos de alta fidelidad para el equipo de desarrollo.</label><br>
+        <label><input type="radio" name="q5" value="opcion3"> c) Reemplazar a los diseñadores por herramientas de inteligencia artificial. </label>
+      </div>
+
+      <div class="question">
+        <p><strong>6. En el diseño vectorial y de impresión, ¿qué significa el término Sangrado (Bleed)?</strong></p>
+        <label><input type="radio" name="q6" value="correcta"> a) Una extensión del diseño que se extiende más allá del borde de corte final, para evitar bordes blancos si la máquina de corte se desplaza ligeramente.</label><br>
+        <label><input type="radio" name="q6" value="opcion2"> b) La distancia mínima que debe haber entre un texto y el borde del papel.</label><br>
+        <label><input type="radio" name="q6" value="opcion3"> c) El espacio en blanco obligatorio que debe rodear un logo.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>7. ¿Qué característica define a un Prototipo de Alta Fidelidad (Módulo 1)? </strong></p>
+        <label><input type="radio" name="q7" value="correcta"> a) Es completamente funcional y visualmente idéntico al producto final, con interacciones, diseño visual y contenido casi definitivos.</label><br>
+        <label><input type="radio" name="q7" value="opcion2"> b) Muestra solo la estructura y el flujo de la aplicación sin ningún diseño visual o color.</label><br>
+        <label><input type="radio" name="q7" value="opcion3"> c) Se realiza únicamente con papel y lápiz.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>8. ¿Qué herramienta o método debe utilizarse en un software de edición de imágenes para permitir el escalado (agrandar o encoger) y la aplicación de filtros de forma no destructiva? </strong></p>
+        <label><input type="radio" name="q8" value="correcta"> a) Convertir la capa en un Objeto Inteligente (Smart Object). </label><br>
+        <label><input type="radio" name="q8" value="opcion2"> b) Usar la Herramienta Tampón de Clonar (Clone Stamp Tool). </label><br>
+        <label><input type="radio" name="q8" value="opcion3"> c) Rasterizar la capa (Rasterize Layer). </label>
+      </div>
+
+      <div class="question">
+        <p><strong>9. ¿Qué aborda principalmente el estándar WCAG (Web Content Accessibility Guidelines) en el Módulo 4 de UX Avanzado? </strong></p>
+        <label><input type="radio" name="q9" value="correcta"> a) Las pautas para hacer que el contenido web sea más accesible para personas con diversas discapacidades (visuales, auditivas, cognitivas, etc.).</label><br>
+        <label><input type="radio" name="q9" value="opcion2"> b) La velocidad de carga y optimización del código de un sitio web.</label><br>
+        <label><input type="radio" name="q9" value="opcion3"> c) La creación de prototipos funcionales de alta fidelidad. </label> 
+      </div>
+
+      <div class="question">
+        <p><strong>10. 
+En la presentación de proyectos (Módulo 5), ¿cuál es la técnica más efectiva para justificar las decisiones de diseño y conectar con la audiencia? </strong></p>
+        <label><input type="radio" name="q10" value="correcta"> a) Utilizar el Storytelling (Narrativa) para relatar el problema inicial, el proceso de diseño iterativo, y cómo las decisiones tomadas condujeron a la solución final.</label><br>
+        <label><input type="radio" name="q10" value="opcion2"> b) Enumerar en formato de lista todas las herramientas de software utilizadas en el proyecto.</label><br>
+        <label><input type="radio" name="q10" value="opcion3"> c) Incluir una gran cantidad de capturas de pantalla de la interfaz sin explicación. </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </form>
+
+   <div id="result" class="mt-3"></div>
+
+    <div class="text-center mt-3">
+      <button id="retryBtn" class="btn btn-warning" style="display:none;">Volver a intentar</button>
+      <button id="certBtn" class="btn btn-success" style="display:none;">Obtener mi certificado</button>
+    </div>
+  </main>
+
+<script>
+ const totalPreguntas = 10;
+const minAprobado = 7;
+let tiempoRestante = 300; // 5 minutos
+let temporizador;
+
+const timerSpan = document.getElementById('timer');
+const quizForm = document.getElementById('quizForm');
+const result = document.getElementById('result');
+const retryBtn = document.getElementById('retryBtn');
+const certBtn = document.getElementById('certBtn');
+
+// === Iniciar temporizador ===
+function iniciarTemporizador() {
+  clearInterval(temporizador);
+  tiempoRestante = 300;
+  temporizador = setInterval(() => {
+    let minutos = Math.floor(tiempoRestante / 60);
+    let segundos = tiempoRestante % 60;
+    timerSpan.textContent = `${minutos.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
+    tiempoRestante--;
+    if (tiempoRestante < 0) {
+      clearInterval(temporizador);
+      evaluarTest(true);
+    }
+  }, 1000);
+}
+
+// === Resetear test ===
+function resetearTest() {
+  quizForm.reset();
+  result.innerHTML = '';
+  retryBtn.style.display = 'none';
+  certBtn.style.display = 'none';
+  iniciarTemporizador();
+}
+
+// === Evento submit del formulario ===
+quizForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  evaluarTest(false);
+});
+
+// === Botón reintentar ===
+retryBtn.addEventListener('click', () => {
+  resetearTest();
+});
+
+// === Botón certificado ===
+certBtn.addEventListener('click', () => {
+  window.location.href = 'certificado.html';
+});
+
+// === Evaluar test ===
+function evaluarTest(tiempoAcabado) {
+  const respuestasCorrectas = {
+    q1: 'Impar',
+    q2: 'correcta',
+    q3: 'Lista',
+    q4: 'correcta',
+    q5: 'correcta',
+    q6: 'correcta',
+    q7: 'correcta',
+    q8: 'correcta',
+    q9: 'correcta',
+    q10: 'correcta'
+  };
+
+  let puntaje = 0;
+
+  for (let q in respuestasCorrectas) {
+    const r = document.querySelector(`input[name="${q}"]:checked`);
+    if (r && r.value === respuestasCorrectas[q]) {
+      puntaje++;
+    }
+  }
+
+  if (puntaje >= minAprobado) {
+    result.innerHTML = `
+      <p>¡Felicidades! Puntaje: ${puntaje}/${totalPreguntas}.</p>
+      <p>Ahora puedes obtener tu certificado y tendrás la oportunidad de subir un proyecto guiado en PDF para mejorar tu perfil profesional en la bolsa de empleo de EducaciónIT.</p>
+    `;
+    certBtn.style.display = 'inline-block';
+    retryBtn.style.display = 'none';
+    clearInterval(temporizador);
+    // ✅ Guardar curso completado
+    localStorage.setItem("cursoCompletado", "true");
+  } else {
+    if (tiempoAcabado) {
+      result.innerHTML = `<p>Se acabó el tiempo. Obtuviste ${puntaje}/${totalPreguntas}. Debes volver a intentar el test.</p>`;
+    } else {
+      result.innerHTML = `<p>Obtuviste ${puntaje}/${totalPreguntas}. Debes repetir el test.</p>`;
+    }
+    retryBtn.style.display = 'inline-block';
+    certBtn.style.display = 'none';
+    clearInterval(temporizador);
+  }
+}
+
+// === Iniciar temporizador al cargar la página ===
+iniciarTemporizador();
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Evaluación Final</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="quiz-container container py-4">
+    <h2 class="text-center mb-3">Evaluación Final</h2>
+    <p class="text-center">Tienes 5 minutos para completar el test. Para aprobar con nota máxima debes obtener al menos 7 puntos.</p>
+    <div class="text-center mb-3">
+      <span>Tiempo restante: </span><span id="timer">05:00</span>
+    </div>
+
+    <form id="quizForm">
+      <!-- Preguntas -->
+      <div class="question">
+        <p><strong>1. ¿Qué significa la sigla SEO?</strong></p>
+        <label><input type="radio" name="q1" value="Par"> a) Site Experience Orchestration.</label><br>
+        <label><input type="radio" name="q1" value="Impar"> b) Search Engine Optimization.</label><br>
+        <label><input type="radio" name="q1" value="7"> c) Site Experience Orchestration.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>2. ¿Cuál de las siguientes fases es la responsable de almacenar y organizar la información encontrada por el motor de búsqueda, antes de clasificarla para una consulta?</strong></p>
+        <label><input type="radio" name="q2" value="correcta"> a) Indexación (Indexing).</label><br>
+        <label><input type="radio" name="q2" value="opcion2"> b) Rastreo (Crawling).</label><br>
+        <label><input type="radio" name="q2" value="opcion3"> c) Clasificación (Ranking).</label>
+      </div>
+
+      <div class="question">
+        <p><strong>3.¿Cuál es la principal diferencia entre SEO y SEM?</strong></p>
+        <label><input type="radio" name="q3" value="Tupla"> a) El SEO solo se aplica a blogs, mientras que el SEM se aplica a e-commerce.</label><br>
+        <label><input type="radio" name="q3" value="Lista"> b) El SEO se enfoca en resultados orgánicos (gratuitos), mientras que el SEM utiliza anuncios de pago (PPC).</label><br>
+        <label><input type="radio" name="q3" value="Conjunto"> c)El SEO se enfoca en la velocidad de carga, mientras que el SEM se enfoca en el contenido.</label><br>
+      </div>
+
+      <div class="question">
+        <p><strong>4.Un usuario busca la frase 'mejor herramienta de email marketing' con el objetivo de comparar opciones y tomar una decisión. ¿Qué tipo de Intención de Búsqueda predomina en esta consulta?</strong></p>
+        <label><input type="radio" name="q4" value="correcta"> a) Transaccional (Comercial).</label><br>
+        <label><input type="radio" name="q4" value="opcion2"> b) Navegacional.</label><br>
+        <label><input type="radio" name="q4" value="opcion3"> c)Informativa.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>5.¿Cuál es la principal característica y ventaja de las palabras clave de cola larga (long-tail keywords) en una estrategia de Keyword Research?</strong></p>
+        <label><input type="radio" name="q5" value="correcta"> a) Son frases más específicas, con menor competencia y una intención de búsqueda más clara, lo que aumenta la tasa de conversión.</label><br>
+        <label><input type="radio" name="q5" value="opcion2"> b) Tienen un volumen de búsqueda muy alto, garantizando millones de visitas rápidamente.</label><br>
+        <label><input type="radio" name="q5" value="opcion3"> c) Son términos amplios y muy competitivos (ej. 'dieta', 'coche', 'noticias').</label>
+      </div>
+
+      <div class="question">
+        <p><strong>6. ¿Qué representa el acrónimo SERP en el contexto de la Investigación de Palabras Clave y SEO?</strong></p>
+        <label><input type="radio" name="q6" value="correcta"> a) Search Engine Results Page.</label><br>
+        <label><input type="radio" name="q6" value="opcion2"> b) Site Entry and Revenue Plan.</label><br>
+        <label><input type="radio" name="q6" value="opcion3"> c)Search Engine Ranking Position.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>7.¿Cuál es el papel principal del Title Tag (etiqueta de título) en la optimización On-Page?</strong></p>
+        <label><input type="radio" name="q7" value="correcta"> a) Es el texto que se ve en la SERP, influyendo directamente en el CTR (Click-Through Rate) de los usuarios.</label><br>
+        <label><input type="radio" name="q7" value="opcion2"> b)Determinar la velocidad de carga de la página, ya que es la primera etiqueta leída por el navegador.</label><br>
+        <label><input type="radio" name="q7" value="opcion3"> c) Funciona como el encabezado más grande de la página (H1), estructurando visualmente el contenido.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>8. Para el artículo 'Guía Completa de Cocina Vegana para Principiantes', ¿cuál sería la mejor opción de URL optimizada para SEO?</strong></p>
+        <label><input type="radio" name="q8" value="correcta"> a) www.ejemplo.com/guia-cocina-vegana-principiantes</label><br>
+        <label><input type="radio" name="q8" value="opcion2"> b) www.ejemplo.com/p=48927?cat=veg</label><br>
+        <label><input type="radio" name="q8" value="opcion3"> c) www.ejemplo.com/guia-completa-de-cocina-vegana-para-principiantes-paso-a-paso-2025</label>
+      </div>
+
+      <div class="question">
+        <p><strong>9. ¿Cuál es la regla fundamental para el uso de la etiqueta de encabezado principal (H1) en una página web?</strong></p>
+        <label><input type="radio" name="q9" value="correcta"> a)Solo debe haber una por página y debe contener la palabra clave principal de forma destacada.</label><br>
+        <label><input type="radio" name="q9" value="opcion2"> b) Es un elemento opcional; si el Title Tag es bueno, el H1 no es necesario.</label><br>
+        <label><input type="radio" name="q9" value="opcion3"> c) Debe usarse varias veces para destacar todos los subtítulos importantes de la página.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>10.¿Cuál es la función principal del enlazado interno en una estrategia SEO On-Page?</strong></p>
+        <label><input type="radio" name="q10" value="correcta"> a) Distribuir el 'jugo de enlace' (link juice) entre las páginas del sitio y ayudar a los motores de búsqueda a descubrir y rastrear más contenido.</label><br>
+        <label><input type="radio" name="q10" value="opcion2"> b) Crear anuncios de texto para generar ingresos adicionales en la página.</label><br>
+        <label><input type="radio" name="q10" value="opcion3"> c) Transferir autoridad de otras páginas web (Backlinks) hacia la página actual.</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </form>
+
+   <div id="result" class="mt-3"></div>
+
+    <div class="text-center mt-3">
+      <button id="retryBtn" class="btn btn-warning" style="display:none;">Volver a intentar</button>
+      <button id="certBtn" class="btn btn-success" style="display:none;">Obtener mi certificado</button>
+    </div>
+  </main>
+
+<script>
+const totalPreguntas = 10;
+const minAprobado = 7;
+let tiempoRestante = 300; // 5 minutos
+let temporizador;
+
+const timerSpan = document.getElementById('timer');
+const quizForm = document.getElementById('quizForm');
+const result = document.getElementById('result');
+const retryBtn = document.getElementById('retryBtn');
+const certBtn = document.getElementById('certBtn');
+
+function iniciarTemporizador() {
+  clearInterval(temporizador);
+  tiempoRestante = 300;
+  temporizador = setInterval(() => {
+    let minutos = Math.floor(tiempoRestante / 60);
+    let segundos = tiempoRestante % 60;
+    timerSpan.textContent = `${minutos.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
+    tiempoRestante--;
+    if(tiempoRestante < 0){
+      clearInterval(temporizador);
+      evaluarTest(true);
+    }
+  }, 1000);
+}
+
+function resetearTest() {
+  quizForm.reset();
+  result.innerHTML = '';
+  retryBtn.style.display = 'none';
+  certBtn.style.display = 'none';
+  iniciarTemporizador();
+}
+
+quizForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  evaluarTest(false);
+});
+
+retryBtn.addEventListener('click', () => {
+  resetearTest();
+});
+
+certBtn.addEventListener('click', () => {
+  window.location.href = 'certificado.html';
+});
+
+function evaluarTest(tiempoAcabado) {
+  const respuestasCorrectas = {
+    q1:'Impar', q2:'correcta', q3:'Lista', q4:'correcta', q5:'correcta',
+    q6:'correcta', q7:'correcta', q8:'correcta', q9:'correcta', q10:'correcta'
+  };
+
+  let puntaje = 0;
+
+  for(let q in respuestasCorrectas){
+    const r = document.querySelector(`input[name="${q}"]:checked`);
+    if(r && r.value === respuestasCorrectas[q]){
+      puntaje++;
+    }
+  }
+
+  if(puntaje >= minAprobado){
+    result.innerHTML = `
+      <p>¡Felicidades! Puntaje: ${puntaje}/${totalPreguntas}.</p>
+      <p>Ahora puedes obtener tu certificado y tendrás la oportunidad de subir un proyecto guiado en PDF para mejorar tu perfil profesional en la bolsa de empleo de EducaciónIT.</p>
+    `;
+
+    // ✅ Guardar estado de curso completado en localStorage
+    localStorage.setItem("cursoCompletado", "true");
+
+    certBtn.style.display = 'inline-block';
+    retryBtn.style.display = 'none';
+    clearInterval(temporizador);
+  } else {
+    if(tiempoAcabado){
+      result.innerHTML = `<p>Se acabó el tiempo. Obtuviste ${puntaje}/${totalPreguntas}. Debes volver a intentar el test.</p>`;
+    } else {
+      result.innerHTML = `<p>Obtuviste ${puntaje}/${totalPreguntas}. Debes repetir el test.</p>`;
+    }
+    retryBtn.style.display = 'inline-block';
+    certBtn.style.display = 'none';
+    clearInterval(temporizador);
+  }
+}
+
+// Iniciar la primera vez
+iniciarTemporizador();
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

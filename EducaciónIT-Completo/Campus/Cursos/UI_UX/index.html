@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Virtual - UI/UX</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="campus.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <span class="navbar-text">Bienvenido al Campus EducaciónIT</span>
+  <div class="dropdown">
+    <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-person-circle user-icon"></i>
+      <span class="ms-2">Usuario</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+      <li><a class="dropdown-item" href="../../mis_cursos.html"><i class="bi bi-journal-text me-2"></i>Mis cursos</a></li>
+      <li><a class="dropdown-item" href="../../index.html"><i class="bi bi-box-arrow-right me-2"></i>Salir</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="campus-container">
+  <aside class="sidebar">
+    <h4>UI/UX</h4>
+    <ul class="list-group" id="lista-modulos"></ul>   
+  </aside>
+
+  <main class="content d-flex flex-column justify-content-center align-items-center text-center">
+    <div id="pantalla-inicial">
+      <h2>Bienvenid@ al Curso de UI/UX</h2>
+      <p class="mt-3">
+        Este curso está diseñado para que desarrolles las habilidades necesarias para gestionar, construir y moderar comunidades en torno a una marca en el entorno digital.
+        Contamos con <strong>4 módulos</strong> que incluyen:
+      </p>
+      <ul class="text-start mx-auto" style="max-width:500px;">
+        <li>Introducción y Fundamentos de UX/UI</li>
+        <li>Investigación y Definición del Usuario (UX Research)</li>
+        <li>Ideación, Wireframing y Prototipado</li>
+        <li>Diseño UI Avanzado y Tendencias</li>
+      </ul>
+      <p class="mt-3">
+        Ante cualquier duda, podés escribir al correo del profesora <strong>Carlos Gomez</strong>: 
+        <a href="carlos.gomez@educacionit.com">carlos.gomez@educacionit.com</a>
+      </p>
+      <button id="btn-comenzar" class="btn btn-primary mt-3">Comenzar</button>
+    </div>
+
+    <div id="contenido-curso" style="display:none; width:100%;">
+      <h2 id="titulo-leccion"></h2>
+      <div id="contenido-leccion"></div>
+      <div class="d-flex justify-content-end">
+        <button id="btn-siguiente" class="btn btn-primary mt-3" onclick="siguienteTema()" disabled>Siguiente</button>
+      </div>
+    </div>
+
+    <button id="btn-evaluacion" class="btn btn-warning mt-3" onclick="window.location.href='prueba.html'" style="display:none;">
+      Realizar Evaluación Final
+    </button>
+  </main>  
+</div>
+
+<script>
+const curso = [
+    {
+        titulo: "Módulo 1: Introducción",
+        temas: [
+        {
+            titulo: "Introducción y Fundamentos de UX/UI",
+            contenido: `
+            <div class="tema-contenido">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/INGLmqP1PME?si=E9iI9m3zgQhlaKbt"  title="ui1" allowfullscreen></iframe>
+            </div>
+            <div class="descripcion-container text-center" style="max-width: 800px; margin: 0 auto;">
+                <h3>Introducción y Fundamentos de UX/UI</h3>
+                <p>
+                Módulo 1: Fundamentos de la Publicidad en Redes Sociales
+                Descripción:
+                ¿Qué es UX y UI? Diferencias y relación. - Importancia en productos digitales. - El proceso de Diseño Centrado en el Usuario (DCU). - Conceptos clave: usabilidad, accesibilidad y deseabilidad.
+                </p>
+                <p>
+                Ante cualquier duda, puedes comunicarte con el profesor 
+                <a href="mailto:carlos.gomez@educacionit.com" style="text-decoration: none; color: #0d6efd; display: inline-flex; align-items: center; gap: 5px;">
+                    <i class="bi bi-envelope-fill"></i> carlos.gomez@educacionit.com
+                </a>
+                </p>
+            </div>
+            </div>`
+        },
+        ]
+    },
+  {
+    titulo: "Módulo 2: Investigación y Definición del Usuario (UX Research)",
+    temas: [
+      {
+        titulo: "Investigación y Definición del Usuario",
+        contenido: `
+        <div class="tema-contenido">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/UVC3YXtqUgA?si=2KLLvR3w2C9YHf-6"  title="ui2" allowfullscreen></iframe>
+          </div>
+          <div class="descripcion-container">
+            <h3>¿Qué aprenderás?</h3>
+            <p> Métodos de investigación: Entrevistas, encuestas, análisis de la competencia. - Creación de Personas (arquetipos de usuario). - Mapeo de la experiencia: Customer Journey Map y Mapa de Empatía. - Arquitectura de la Información (AI) y Flujos de Usuario.</p>
+          </div>
+        </div>`
+      },
+      {
+        titulo: "Evaluación y Testeo de Usabilidad",
+        contenido: `
+        <div class="tema-contenido">
+          <div class="video-container">
+            <iframe  src="https://www.youtube.com/embed/4OvTDueifA0?si=jvvTdpXCUoJxv0sl"   title="ui3" allowfullscreen></iframe>
+          </div>
+          <div class="descripcion-container">
+            <h3>¿Qué aprenderás?</h3>
+            <p>-¿Qué es el Test de Usabilidad y por qué es crucial? - Tipos de pruebas de usabilidad (moderadas, no moderadas, A/B testing). - Preparación y ejecución de un test (Guion y tareas). - Análisis de resultados e iteración del diseño.</p>
+          </div>
+        </div>`
+      }
+    ]
+  },
+  {
+    titulo: "Módulo 3: Distribución y Promoción",
+    temas: [
+      {
+        titulo: "Distribución y Promoción",
+        contenido: `
+        <div class="tema-contenido">
+          <div class="video-container">
+            <iframe  src="https://www.youtube.com/embed/4OvTDueifA0?si=jvvTdpXCUoJxv0sl"   title="ui4" allowfullscreen></iframe>
+          </div>
+          <div class="descripcion-container">
+            <h3>¿Qué aprenderás?</h3>
+            <p> ¿Qué es el Test de Usabilidad y por qué es crucial? - Tipos de pruebas de usabilidad (moderadas, no moderadas, A/B testing). - Preparación y ejecución de un test (Guion y tareas). - Análisis de resultados e iteración del diseño.</p>
+          </div>
+        </div>`
+      }
+    ]
+  },
+  {
+    titulo: "Módulo 4:Diseño UI Avanzado y Tendencias",
+    temas: [
+      {
+        titulo: "Diseño UI Avanzado y Tendencias",
+        contenido: `
+        <div class="tema-contenido">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/MTHgMs3G8AU?si=7_Xffo8-8M8ESVtX"  title="ui5" allowfullscreen></iframe>
+          </div>
+          <div class="descripcion-container">
+            <h3>¿Qué aprenderás?</h3>
+            <p> Sistemas de Diseño (Design Systems) y Librerías de Componentes. - Tendencias actuales en UI/UX (Diseño Minimalista, Neumorfismo, Animaciones). - Herramientas avanzadas (Hand-off a desarrollo, IA en diseño). - Consideraciones de negocio y métricas (KPIs).</p>
+          </div>
+        </div>`
+      }
+    ]
+  }
+];
+
+
+
+
+let moduloActual = 0;
+let temaActual = 0;
+
+const listaModulos = document.getElementById('lista-modulos');
+const tituloLeccion = document.getElementById('titulo-leccion');
+const contenidoLeccion = document.getElementById('contenido-leccion');
+const btnSiguiente = document.getElementById('btn-siguiente');
+const btnComenzar = document.getElementById('btn-comenzar');
+const btnEvaluacion = document.getElementById('btn-evaluacion'); // botón test
+
+// === GUARDAR Y CARGAR PROGRESO LOCAL ===
+function guardarProgreso() {
+  const progreso = {
+    moduloActual,
+    temaActual,
+    curso: curso.map(mod => ({
+      habilitado: mod.habilitado,
+      temas: mod.temas.map(t => ({
+        hecho: t.hecho,
+        habilitado: t.habilitado
+      }))
+    })),
+    cursoCompletado: localStorage.getItem("cursoCompletado") === "true"
+  };
+  localStorage.setItem("progresoPython", JSON.stringify(progreso));
+}
+
+function cargarProgresoLocal() {
+  const data = localStorage.getItem("progresoPython");
+  if (!data) return false;
+  const progreso = JSON.parse(data);
+
+  progreso.curso.forEach((mod, i) => {
+    curso[i].habilitado = mod.habilitado;
+    mod.temas.forEach((t, j) => {
+      curso[i].temas[j].hecho = t.hecho;
+      curso[i].temas[j].habilitado = t.habilitado;
+    });
+  });
+
+  moduloActual = progreso.moduloActual;
+  temaActual = progreso.temaActual;
+
+  return true;
+}
+
+// Inicializar estado
+curso.forEach(m => {
+  m.habilitado = false;
+  m.temas.forEach(t => {
+    t.hecho = false;
+    t.habilitado = false;
+  });
+});
+
+// Cargar módulos en sidebar
+function cargarModulos() {
+  listaModulos.innerHTML = "";
+  curso.forEach((modulo, i) => {
+    const li = document.createElement('li');
+    li.classList.add('list-group-item');
+    if (!modulo.habilitado) li.classList.add('deshabilitado');
+
+    const todosHechos = modulo.temas.every(t => t.hecho);
+    const iconoCheck = todosHechos ? `<i class="bi bi-check2 modulo-completo"></i>` : "";
+
+    li.innerHTML = `
+      <a class="modulo-link" data-bs-toggle="collapse" href="#modulo${i}" role="button">
+        ${modulo.titulo} ${iconoCheck} <i class="bi bi-chevron-down"></i>
+      </a>
+      <ul class="list-group collapse" id="modulo${i}"></ul>
+    `;
+    listaModulos.appendChild(li);
+
+    const ulTemas = li.querySelector('ul');
+    modulo.temas.forEach((tema, j) => {
+      const temaLi = document.createElement('li');
+      temaLi.classList.add('list-group-item', 'tema-item');
+      temaLi.textContent = tema.titulo;
+
+      if (tema.habilitado) {
+        temaLi.style.cursor = 'pointer';
+        temaLi.style.opacity = '1';
+        temaLi.onclick = () => mostrarTema(i, j);
+      } else {
+        temaLi.style.cursor = 'not-allowed';
+        temaLi.style.opacity = '0.5';
+      }
+
+      ulTemas.appendChild(temaLi);
+    });
+  });
+}
+
+// Mostrar tema
+function mostrarTema(m, t) {
+  if (!curso[m].habilitado || !curso[m].temas[t].habilitado) {
+    alert("Debes completar los temas anteriores primero.");
+    return;
+  }
+
+  moduloActual = m;
+  temaActual = t;
+  const tema = curso[m].temas[t];
+  tituloLeccion.textContent = tema.titulo;
+  contenidoLeccion.innerHTML = tema.contenido;
+
+  let botonesHTML = `<button class="btn btn-success" id="btn-hecho">Marcar como hecho</button>`;
+  if (m === 1 && t === 1) {
+    botonesHTML += `<button class="btn btn-primary" id="btn-pdf" onclick="window.open('Material/EjerciciosPython.pdf', '_blank')">Ver PDF de práctica</button>`;
+  }
+
+  const contenedorBotones = document.createElement('div');
+  contenedorBotones.id = 'botones-leccion';
+  contenedorBotones.className = 'd-flex gap-2 mt-3 justify-content-end';
+  contenedorBotones.innerHTML = botonesHTML;
+  contenidoLeccion.appendChild(contenedorBotones);
+
+  btnSiguiente.disabled = true;
+  btnSiguiente.style.display = (m === curso.length - 1 && t === curso[m].temas.length - 1)
+    ? 'none' : 'inline-block';
+
+  document.getElementById('btn-hecho').onclick = () => marcarComoHecho(m, t);
+
+  // Mostrar botón evaluación solo si es el último tema del último módulo y no completado
+  if (m === curso.length - 1 && t === curso[m].temas.length - 1 && localStorage.getItem("cursoCompletado") !== "true") {
+    btnEvaluacion.style.display = 'block';
+  } else {
+    btnEvaluacion.style.display = 'none';
+  }
+
+  guardarProgreso();
+}
+
+// Marcar tema como hecho
+function marcarComoHecho(m, t) {
+  curso[m].temas[t].hecho = true;
+  btnSiguiente.disabled = false;
+
+  if (t + 1 < curso[m].temas.length) {
+    curso[m].temas[t + 1].habilitado = true;
+  } else if (m + 1 < curso.length) {
+    curso[m + 1].habilitado = true;
+    curso[m + 1].temas[0].habilitado = true;
+  }
+
+  guardarProgreso();
+  cargarModulos();
+}
+
+// Aprobar curso después del test
+function aprobarCurso() {
+  localStorage.setItem("cursoCompletado", "true");
+  guardarProgreso();
+  mostrarCursoCompletadoGlobal();
+}
+
+// Mostrar curso completado
+function mostrarCursoCompletadoGlobal() {
+  btnEvaluacion.style.display = 'none';
+
+  // Marcar todos los módulos y temas como completados
+  curso.forEach(mod => {
+    mod.habilitado = true;
+    mod.temas.forEach(t => t.hecho = true);
+  });
+
+  // Actualizar sidebar con check
+  cargarModulos();
+
+  // Mostrar mensaje central
+  contenidoLeccion.innerHTML = "";
+  const mensaje = document.createElement('div');
+  mensaje.className = 'alert alert-success mt-4 text-center fw-bold';
+  mensaje.textContent = '🎉 ¡Felicidades! Has completado el curso exitosamente.';
+  contenidoLeccion.appendChild(mensaje);
+}
+
+// Botón siguiente
+function siguienteTema() {
+  if (temaActual < curso[moduloActual].temas.length - 1) {
+    mostrarTema(moduloActual, temaActual + 1);
+  } else if (moduloActual < curso.length - 1) {
+    mostrarTema(moduloActual + 1, 0);
+  } else {
+    btnSiguiente.disabled = true;
+  }
+  guardarProgreso();
+}
+
+// Botón comenzar
+btnComenzar.onclick = () => {
+  document.getElementById('pantalla-inicial').style.display = 'none';
+  document.getElementById('contenido-curso').style.display = 'block';
+  curso[0].habilitado = true;
+  curso[0].temas[0].habilitado = true;
+  cargarModulos();
+  mostrarTema(0, 0);
+};
+
+// === Al cargar la página ===
+document.addEventListener("DOMContentLoaded", () => {
+  cargarProgresoLocal();
+
+  if (localStorage.getItem("cursoCompletado") === "true") {
+    mostrarCursoCompletadoGlobal();
+  } else {
+    const tieneProgreso = cargarProgresoLocal();
+    if (tieneProgreso) {
+      document.getElementById('pantalla-inicial').style.display = 'none';
+      document.getElementById('contenido-curso').style.display = 'block';
+      cargarModulos();
+      mostrarTema(moduloActual, temaActual);
+    } else {
+      cargarModulos();
+    }
+  }
+});
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

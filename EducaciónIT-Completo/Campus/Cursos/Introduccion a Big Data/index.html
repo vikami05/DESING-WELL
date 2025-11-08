@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Virtual - Introducción a Big Data </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="campus.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <span class="navbar-text">Bienvenido al Campus EducaciónIT</span>
+  <div class="dropdown">
+    <a class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" href="#" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-person-circle user-icon"></i>
+      <span class="ms-2">Usuario</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+      <li><a class="dropdown-item" href="../../mis_cursos.html"><i class="bi bi-journal-text me-2"></i>Mis cursos</a></li>
+      <li><a class="dropdown-item" href="../../index.html"><i class="bi bi-box-arrow-right me-2"></i>Salir</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="campus-container">
+  <aside class="sidebar">
+    <h4> Introducción a Big Data</h4>
+    <ul class="list-group" id="lista-modulos"></ul>   
+  </aside>
+
+  <main class="content d-flex flex-column justify-content-center align-items-center text-center">
+    <div id="pantalla-inicial">
+      <h2>Bienvenid@ al Curso de Introducción a Big Data</h2>
+      <p class="mt-3">
+        Este curso está diseñado para que desarrolles las habilidades necesarias para gestionar, construir y moderar comunidades en torno a una marca en el entorno digital.
+        Contamos con <strong>4 módulos</strong> que incluyen:
+      </p>
+      <ul class="text-start mx-auto" style="max-width:500px;">
+        <li> Fundamentos y Conceptos Básicos de Big Data </li>
+        <li> Herramientas y Ecosistema de Big Data </li>
+        <li> Arquitectura Avanzada y Procesamiento en Tiempo Real </li>
+        <li> Ética, Gobierno de Datos y el Futuro </li>
+      </ul>
+      <p class="mt-3">
+        Ante cualquier duda, podés escribir al correo del profesora <strong>Sofia Ramirez</strong>: 
+        <a href="Sofia.ramirez@educacionit.com">Sofia.ramirez@educacionit.com</a>
+      </p>
+      <button id="btn-comenzar" class="btn btn-primary mt-3">Comenzar</button>
+    </div>
+
+    <div id="contenido-curso" style="display:none; width:100%;">
+      <h2 id="titulo-leccion"></h2>
+      <div id="contenido-leccion"></div>
+      <div class="d-flex justify-content-end">
+        <button id="btn-siguiente" class="btn btn-primary mt-3" onclick="siguienteTema()" disabled>Siguiente</button>
+      </div>
+    </div>
+
+    <button id="btn-evaluacion" class="btn btn-warning mt-3" onclick="window.location.href='prueba.html'" style="display:none;">
+      Realizar Evaluación Final
+    </button>
+  </main>  
+</div>
+
+<script>
+const curso = [
+    {
+        titulo: "Módulo 1: Introducción",
+        temas: [
+        {
+            titulo: "Fundamentos y Conceptos Básicos de Big Data",
+            contenido: `
+            <div class="tema-contenido">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/M26iIqmqWkI?si=y3dG9UzYWY6rbGBg" title="big1" allowfullscreen></iframe>
+            </div>
+            <div class="descripcion-container text-center" style="max-width: 800px; margin: 0 auto;">
+                <h3>Fundamentos y Conceptos Básicos de Big Data</h3>
+                <p>
+                Módulo 1: Fundamentos y Conceptos Básicos de Big Data
+                Descripción:
+                Temas Principales:
+
+                Definición de Big Data y su diferencia con los datos tradicionales.
+
+                Las V's del Big Data (Volumen, Velocidad, Variedad, Veracidad, Valor) y su significado.
+
+                Casos de uso y la importancia de Big Data en la toma de decisiones empresariales.
+                </p>
+                <p>
+                Ante cualquier duda, puedes comunicarte con el profesor 
+                <a href="mailto:Sofia.ramirez@educacionit.com" style="text-decoration: none; color: #0d6efd; display: inline-flex; align-items: center; gap: 5px;">
+                    <i class="bi bi-envelope-fill"></i> Sofia.ramirez@educacionit.com
+                </a>
+                </p>
+            </div>
+            </div>`
+        },
+        ]
+    },
+  {
+    titulo: "Módulo 2: Herramientas y Ecosistema de Big Data",
+    temas: [
+      
+      {
+        titulo: "Módulo 2: Herramientas y Ecosistema de Big Data",
+        contenido: `
+        <div class="tema-contenido">
+          <div class="video-container">
+            <iframe  src="https://www.youtube.com/embed/1xlG-SsPHCc?si=4yVgC936g-rC3syL"   title="big2" allowfullscreen></iframe>
+          </div>
+          <div class="descripcion-container">
+            <h3>¿Qué aprenderás?</h3>
+            <p> Temas Principales:
+
+            Introducción a las arquitecturas de datos (Data Warehouse vs. Data Lake).
+
+            Descripción de las herramientas y marcos de trabajo Open Source más comunes: Hadoop (HDFS, MapReduce) y Spark.
+
+            Tipos de bases de datos utilizadas en Big Data: NoSQL (ej. Cassandra, HBase).
+
+            Introducción a los lenguajes de programación clave (Python y R).</p>
+          </div>
+        </div>`
+      },
+      {
+        titulo: "Big Data Analytics y Extracción de Valor",
+        contenido: `
+        <div class="tema-contenido">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/uQmcgvxx_g0?si=ZMW6vYq92thD7vxP"  title="big3" allowfullscreen></iframe>
+          </div>
+          <div class="descripcion-container">
+            <h3>¿Qué aprenderás?</h3>
+            <p> Temas Principales:
+
+            Concepto de Big Data Analytics.
+
+            Tipos de análisis: Descriptivo, Diagnóstico, Predictivo y Prescriptivo.
+
+            Conceptos básicos de Visualización de Datos para comunicar insights.
+
+            El rol del Data Scientist y del Data Engineer en el análisis de Big Data.</p>
+            </div>
+        </div>`
+      }
+    ]
+  },
+  {
+    titulo: "Módulo 3: Arquitectura Avanzada y Procesamiento en Tiempo Real",
+    temas: [
+      {
+        titulo: "Arquitectura Avanzada y Procesamiento en Tiempo Real",
+        contenido: `
+        <div class="tema-contenido">
+          <div class="video-container">
+            <iframe  src="https://www.youtube.com/embed/_useTnWX0C4?si=f0hjnP3uFvue3Lbz"   title="big4" allowfullscreen></iframe>
+          </div>
+          <div class="descripcion-container">
+            <h3>¿Qué aprenderás?</h3>
+            <p> Temas Principales:
+
+            Arquitecturas modernas de Big Data: Lambda y Kappa.
+
+            Procesamiento de streaming (datos en tiempo real) con herramientas como Apache Kafka y Spark Streaming.
+
+            Conceptos de Escalabilidad (horizontal vs. vertical) y Almacenamiento Distribuido avanzado.
+
+            Introducción a servicios de Big Data en la nube (ej. AWS EMR, Azure HDInsight, Google Cloud Dataproc).</p>
+          </div>
+        </div>`
+      }
+    ]
+  },
+  {
+    titulo: "Módulo 4: Ética, Gobierno de Datos y el Futuro",
+    temas: [
+      {
+        titulo: "Ética, Gobierno de Datos y el Futuro",
+        contenido: `
+        <div class="tema-contenido">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/5CwWP2qimqk?si=HhPjP-86tUcrCMau"  title="big5" allowfullscreen></iframe>
+          </div>
+          <div class="descripcion-container">
+            <h3>¿Qué aprenderás?</h3>
+            <p> Temas Principales:
+
+            Gobierno de Datos (Data Governance), Calidad de Datos y Seguridad.
+
+            Ética y Privacidad en Big Data: sesgos en los datos, anonimización y regulaciones (ej. GDPR).
+
+            La Convergencia de Big Data e Inteligencia Artificial (IA) y Machine Learning.
+
+            Tendencias futuras: Big Data en Edge Computing y la próxima generación de herramientas. </p>
+          </div>
+        </div>`
+      }
+    ]
+  }
+];
+
+
+
+
+let moduloActual = 0;
+let temaActual = 0;
+
+const listaModulos = document.getElementById('lista-modulos');
+const tituloLeccion = document.getElementById('titulo-leccion');
+const contenidoLeccion = document.getElementById('contenido-leccion');
+const btnSiguiente = document.getElementById('btn-siguiente');
+const btnComenzar = document.getElementById('btn-comenzar');
+const btnEvaluacion = document.getElementById('btn-evaluacion'); // botón test
+const localStorageKey = "progresoIntroBigData";
+
+// === GUARDAR Y CARGAR PROGRESO ===
+function guardarProgreso() {
+  const progreso = {
+    moduloActual,
+    temaActual,
+    curso: curso.map(mod => ({
+      habilitado: mod.habilitado,
+      temas: mod.temas.map(t => ({
+        hecho: t.hecho,
+        habilitado: t.habilitado
+      }))
+    })),
+    cursoCompletado: localStorage.getItem("cursoCompletado") === "true"
+  };
+  localStorage.setItem(localStorageKey, JSON.stringify(progreso));
+}
+
+function cargarProgresoLocal() {
+  const data = localStorage.getItem(localStorageKey);
+  if (!data) return false;
+  const progreso = JSON.parse(data);
+
+  progreso.curso.forEach((mod, i) => {
+    curso[i].habilitado = mod.habilitado;
+    mod.temas.forEach((t, j) => {
+      curso[i].temas[j].hecho = t.hecho;
+      curso[i].temas[j].habilitado = t.habilitado;
+    });
+  });
+
+  moduloActual = progreso.moduloActual;
+  temaActual = progreso.temaActual;
+  return true;
+}
+
+// === Inicializar estado ===
+curso.forEach(mod => {
+  mod.habilitado = false;
+  mod.temas.forEach(t => {
+    t.hecho = false;
+    t.habilitado = false;
+  });
+});
+
+// === Cargar módulos en sidebar ===
+function cargarModulos() {
+  listaModulos.innerHTML = "";
+  curso.forEach((modulo, i) => {
+    const li = document.createElement('li');
+    li.classList.add('list-group-item');
+    if (!modulo.habilitado) li.classList.add('deshabilitado');
+
+    const todosHechos = modulo.temas.every(t => t.hecho);
+    const iconoCheck = todosHechos ? `<i class="bi bi-check2 modulo-completo"></i>` : "";
+
+    li.innerHTML = `
+      <a class="modulo-link" data-bs-toggle="collapse" href="#modulo${i}" role="button">
+        ${modulo.titulo} ${iconoCheck} <i class="bi bi-chevron-down"></i>
+      </a>
+      <ul class="list-group collapse" id="modulo${i}"></ul>
+    `;
+    listaModulos.appendChild(li);
+
+    const ulTemas = li.querySelector('ul');
+    modulo.temas.forEach((tema, j) => {
+      const temaLi = document.createElement('li');
+      temaLi.classList.add('list-group-item', 'tema-item');
+      temaLi.textContent = tema.titulo;
+
+      if (tema.habilitado) {
+        temaLi.style.cursor = 'pointer';
+        temaLi.style.opacity = '1';
+        temaLi.onclick = () => mostrarTema(i, j);
+      } else {
+        temaLi.style.cursor = 'not-allowed';
+        temaLi.style.opacity = '0.5';
+      }
+
+      ulTemas.appendChild(temaLi);
+    });
+  });
+
+  const todosCompletos = curso.every(mod => mod.temas.every(t => t.hecho));
+  btnEvaluacion.style.display = todosCompletos && localStorage.getItem("cursoCompletado") !== "true" ? 'block' : 'none';
+}
+
+// === Mostrar tema ===
+function mostrarTema(m, t) {
+  if (!curso[m].habilitado || !curso[m].temas[t].habilitado) {
+    alert("Debes completar los temas anteriores primero.");
+    return;
+  }
+
+  moduloActual = m;
+  temaActual = t;
+  const tema = curso[m].temas[t];
+  tituloLeccion.textContent = tema.titulo;
+  contenidoLeccion.innerHTML = tema.contenido;
+
+  let botonesHTML = `<button class="btn btn-success" id="btn-hecho">Marcar como hecho</button>`;
+
+  // PDF de práctica específico
+  if (m === 1 && t === 1) {
+    botonesHTML += `<button class="btn btn-primary" id="btn-pdf" onclick="window.open('Materiales/Actividad_bigdata.pdf','_blank')">Ver PDF de práctica</button>`;
+  }
+
+  const contenedorBotones = document.createElement('div');
+  contenedorBotones.id = 'botones-leccion';
+  contenedorBotones.className = 'd-flex gap-2 mt-3 justify-content-end';
+  contenedorBotones.innerHTML = botonesHTML;
+  contenidoLeccion.appendChild(contenedorBotones);
+
+  btnSiguiente.disabled = true;
+  btnSiguiente.style.display = (m === curso.length - 1 && t === curso[m].temas.length - 1) ? 'none' : 'inline-block';
+
+  document.getElementById('btn-hecho').onclick = () => marcarComoHecho(m, t);
+
+  guardarProgreso();
+}
+
+// === Marcar tema como hecho ===
+function marcarComoHecho(m, t) {
+  curso[m].temas[t].hecho = true;
+  btnSiguiente.disabled = false;
+
+  if (t + 1 < curso[m].temas.length) {
+    curso[m].temas[t + 1].habilitado = true;
+  } else if (m + 1 < curso.length) {
+    curso[m + 1].habilitado = true;
+    curso[m + 1].temas[0].habilitado = true;
+  }
+
+  guardarProgreso();
+  cargarModulos();
+}
+
+// === Aprobar curso después del test ===
+function aprobarCurso() {
+  localStorage.setItem("cursoCompletado", "true");
+  guardarProgreso();
+  mostrarCursoCompletadoGlobal();
+}
+
+// === Mostrar curso completado ===
+function mostrarCursoCompletadoGlobal() {
+  btnEvaluacion.style.display = 'none';
+
+  curso.forEach(mod => {
+    mod.habilitado = true;
+    mod.temas.forEach(t => t.hecho = true);
+  });
+
+  cargarModulos();
+
+  contenidoLeccion.innerHTML = "";
+  const mensaje = document.createElement('div');
+  mensaje.className = 'alert alert-success mt-4 text-center fw-bold';
+  mensaje.textContent = '🎉 ¡Felicidades! Has completado el curso exitosamente.';
+  contenidoLeccion.appendChild(mensaje);
+}
+
+// === Botón siguiente ===
+function siguienteTema() {
+  if (temaActual < curso[moduloActual].temas.length - 1) {
+    mostrarTema(moduloActual, temaActual + 1);
+  } else if (moduloActual < curso.length - 1) {
+    mostrarTema(moduloActual + 1, 0);
+  } else {
+    btnSiguiente.disabled = true;
+  }
+  guardarProgreso();
+}
+
+// === Botón comenzar ===
+btnComenzar.onclick = () => {
+  document.getElementById('pantalla-inicial').style.display = 'none';
+  document.getElementById('contenido-curso').style.display = 'block';
+  curso[0].habilitado = true;
+  curso[0].temas[0].habilitado = true;
+  cargarModulos();
+  mostrarTema(0, 0);
+};
+
+// === Al cargar la página ===
+document.addEventListener("DOMContentLoaded", () => {
+  cargarProgresoLocal();
+
+  if (localStorage.getItem("cursoCompletado") === "true") {
+    mostrarCursoCompletadoGlobal();
+  } else {
+    const tieneProgreso = cargarProgresoLocal();
+    if (tieneProgreso) {
+      document.getElementById('pantalla-inicial').style.display = 'none';
+      document.getElementById('contenido-curso').style.display = 'block';
+      cargarModulos();
+      mostrarTema(moduloActual, temaActual);
+    } else {
+      cargarModulos();
+    }
+  }
+});
+</script>
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

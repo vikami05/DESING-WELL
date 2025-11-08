@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Evaluación Final</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="quiz-container container py-4">
+    <h2 class="text-center mb-3">Evaluación Final</h2>
+    <p class="text-center">Tienes 5 minutos para completar el test. Para aprobar con nota máxima debes obtener al menos 7 puntos.</p>
+    <div class="text-center mb-3">
+      <span>Tiempo restante: </span><span id="timer">05:00</span>
+    </div>
+
+    <form id="quizForm">
+      <!-- Preguntas -->
+      <div class="question">
+        <p><strong>1. ¿Cuál es la principal diferencia entre la Inteligencia Artificial débil (Weak AI) y la Inteligencia Artificial fuerte (Strong AI)?</strong></p>
+        <label><input type="radio" name="q1" value="Par"> a) La IA fuerte es más rápida que la IA débil.</label><br>
+        <label><input type="radio" name="q1" value="Impar"> b) La IA débil solo puede resolver problemas específicos, mientras que la IA fuerte posee conciencia y capacidad de razonamiento general.</label><br>
+        <label><input type="radio" name="q1" value="7"> c) La IA débil solo utiliza datos no estructurados, mientras que la IA fuerte se basa en datos estructurados.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>2.¿Qué tipo de aprendizaje automático se utiliza cuando un modelo predice un valor continuo, como el precio de una casa?</strong></p>
+        <label><input type="radio" name="q2" value="correcta"> a) Regresión</label><br>
+        <label><input type="radio" name="q2" value="opcion2"> b) Aprendizaje no supervisado</label><br>
+        <label><input type="radio" name="q2" value="opcion3"> c) Clasificación</label>
+      </div>
+
+      <div class="question">
+        <p><strong>3. Un sistema de IA que agrupa automáticamente a los clientes por comportamientos de compra sin etiquetas de datos previas es un ejemplo de:</strong></p>
+        <label><input type="radio" name="q3" value="Tupla"> a) Aprendizaje por refuerzo</label><br>
+        <label><input type="radio" name="q3" value="Lista"> b) Aprendizaje no supervisado</label><br>
+        <label><input type="radio" name="q3" value="Conjunto"> c) Regresión</label><br>
+      </div>
+
+      <div class="question">
+        <p><strong>4. ¿Cuál es la principal característica del Aprendizaje Profundo (Deep Learning)?</strong></p>
+        <label><input type="radio" name="q4" value="correcta"> a) Utiliza redes neuronales con múltiples capas ocultas para procesar datos de manera jerárquica.</label><br>
+        <label><input type="radio" name="q4" value="opcion2"> b) Se limita a utilizar un solo algoritmo para todas las tareas.</label><br>
+        <label><input type="radio" name="q4" value="opcion3"> c) Solo funciona para tareas de regresión.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>5. ¿Qué tipo de red neuronal es la más adecuada para tareas de Visión por Computadora, como el reconocimiento de objetos en una imagen?</strong></p>
+        <label><input type="radio" name="q5" value="correcta"> a) Red Neuronal Convolucional (CNN)</label><br>
+        <label><input type="radio" name="q5" value="opcion2"> b) Red Neuronal de Propagación hacia Atrás (Backpropagation Network)</label><br>
+        <label><input type="radio" name="q5" value="opcion3"> c) Redes Generativas Antagónicas (GAN)</label>
+      </div>
+
+      <div class="question">
+        <p><strong>6. En el contexto de un proyecto de IA, ¿cuál de los siguientes es un ejemplo de una aplicación de Procesamiento del Lenguaje Natural (NLP)?</strong></p>
+        <label><input type="radio" name="q6" value="correcta"> a) Traducir un texto de un idioma a otro</label><br>
+        <label><input type="radio" name="q6" value="opcion2"> b) Predecir el precio de una acción en la bolsa de valores</label><br>
+        <label><input type="radio" name="q6" value="opcion3"> c) Clasificar correos electrónicos como spam o no spam</label>
+      </div>
+
+      <div class="question">
+        <p><strong>7.Si una empresa desea usar la IA para sugerir productos a los clientes basándose en sus compras anteriores, ¿qué tecnología estaría utilizando.</strong></p>
+        <label><input type="radio" name="q7" value="correcta"> a) Sistemas de recomendación</label><br>
+        <label><input type="radio" name="q7" value="opcion2"> b) Regresión</label><br>
+        <label><input type="radio" name="q7" value="opcion3"> c) Visión por computadora</label>
+      </div>
+
+      <div class="question">
+        <p><strong>8. Un modelo de IA que puede explicar las razones de sus predicciones, como el diagnóstico de una enfermedad, se conoce como:</strong></p>
+        <label><input type="radio" name="q8" value="correcta"> a) IA explicable (XAI)</label><br>
+        <label><input type="radio" name="q8" value="opcion2"> b) IA generativa</label><br>
+        <label><input type="radio" name="q8" value="opcion3"> c) IA predictiva</label>
+      </div>
+
+      <div class="question">
+        <p><strong>9. Para desarrollar una solución de IA para una empresa, ¿qué paso es fundamental en la etapa de planificación del proyecto?</strong></p>
+        <label><input type="radio" name="q9" value="correcta"> a) Identificar el problema de negocio a resolver y definir el éxito de manera medible.</label><br>
+        <label><input type="radio" name="q9" value="opcion2"> b) Ignorar los riesgos éticos ya que son responsabilidad de los desarrolladores.</label><br>
+        <label><input type="radio" name="q9" value="opcion3"> c) Comenzar a entrenar el modelo antes de definir el objetivo para ahorrar tiempo.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>10. ¿Cuál es un desafío principal en la implementación de la IA en un entorno de producción?</strong></p>
+        <label><input type="radio" name="q10" value="correcta"> a) La integración con los sistemas y flujos de trabajo existentes de la empresa.</label><br>
+        <label><input type="radio" name="q10" value="opcion2"> b) La escasez de expertos en IA es el único obstáculo para la adopción.</label><br>
+        <label><input type="radio" name="q10" value="opcion3"> c) Los modelos de IA siempre son precisos, por lo que no es necesario monitorear su rendimiento.</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </form>
+
+   <div id="result" class="mt-3"></div>
+
+    <div class="text-center mt-3">
+      <button id="retryBtn" class="btn btn-warning" style="display:none;">Volver a intentar</button>
+      <button id="certBtn" class="btn btn-success" style="display:none;">Obtener mi certificado</button>
+    </div>
+  </main>
+
+<script>
+const totalPreguntas = 10;
+const minAprobado = 7;
+let tiempoRestante = 300; // 5 minutos
+let temporizador;
+
+const timerSpan = document.getElementById('timer');
+const quizForm = document.getElementById('quizForm');
+const result = document.getElementById('result');
+const retryBtn = document.getElementById('retryBtn');
+const certBtn = document.getElementById('certBtn');
+
+// Iniciar temporizador
+function iniciarTemporizador() {
+  clearInterval(temporizador);
+  tiempoRestante = 300;
+  temporizador = setInterval(() => {
+    const minutos = Math.floor(tiempoRestante / 60);
+    const segundos = tiempoRestante % 60;
+    timerSpan.textContent = `${minutos.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
+    tiempoRestante--;
+    if (tiempoRestante < 0) {
+      clearInterval(temporizador);
+      evaluarTest(true);
+    }
+  }, 1000);
+}
+
+// Resetear test
+function resetearTest() {
+  quizForm.reset();
+  result.innerHTML = '';
+  retryBtn.style.display = 'none';
+  certBtn.style.display = 'none';
+  iniciarTemporizador();
+}
+
+// Enviar formulario
+quizForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  evaluarTest(false);
+});
+
+// Reintentar test
+retryBtn.addEventListener('click', () => {
+  resetearTest();
+});
+
+// Ir a certificado
+certBtn.addEventListener('click', () => {
+  window.location.href = 'certificado.html';
+});
+
+// Evaluar test
+function evaluarTest(tiempoAcabado) {
+  const respuestasCorrectas = {
+    q1:'Impar', q2:'correcta', q3:'Lista', q4:'correcta', q5:'correcta',
+    q6:'correcta', q7:'correcta', q8:'correcta', q9:'correcta', q10:'correcta'
+  };
+
+  let puntaje = 0;
+  for (let q in respuestasCorrectas) {
+    const r = document.querySelector(`input[name="${q}"]:checked`);
+    if (r && r.value === respuestasCorrectas[q]) {
+      puntaje++;
+    }
+  }
+
+  if (puntaje >= minAprobado) {
+    result.innerHTML = `
+      <p>¡Felicidades! Puntaje: ${puntaje}/${totalPreguntas}.</p>
+      <p>Ahora puedes obtener tu certificado y tendrás la oportunidad de subir un proyecto guiado en PDF para mejorar tu perfil profesional en la bolsa de empleo de EducaciónIT.</p>
+    `;
+    // ✅ Guardar curso completado
+    localStorage.setItem("cursoCompletado", "true");
+
+    certBtn.style.display = 'inline-block';
+    retryBtn.style.display = 'none';
+    clearInterval(temporizador);
+  } else {
+    if (tiempoAcabado) {
+      result.innerHTML = `<p>Se acabó el tiempo. Obtuviste ${puntaje}/${totalPreguntas}. Debes volver a intentar el test.</p>`;
+    } else {
+      result.innerHTML = `<p>Obtuviste ${puntaje}/${totalPreguntas}. Debes repetir el test.</p>`;
+    }
+    retryBtn.style.display = 'inline-block';
+    certBtn.style.display = 'none';
+    clearInterval(temporizador);
+  }
+}
+
+// Iniciar la primera vez
+iniciarTemporizador();
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+ <!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Evaluación Final</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="quiz-container container py-4">
+    <h2 class="text-center mb-3">Evaluación Final</h2>
+    <p class="text-center">Tienes 5 minutos para completar el test. Para aprobar con nota máxima debes obtener al menos 7 puntos.</p>
+    <div class="text-center mb-3">
+      <span>Tiempo restante: </span><span id="timer">05:00</span>
+    </div>
+
+    <form id="quizForm">
+      <!-- Preguntas -->
+      <div class="question">
+        <p><strong>1. ¿Cuál es la principal responsabilidad del Community Manager (CM) en la estructura de marketing digital?</strong></p>
+        <label><input type="radio" name="q1" value="Par"> a) Crear y diseñar los gráficos, videos e imágenes que se publicarán en las redes sociales.</label><br>
+        <label><input type="radio" name="q1" value="Impar"> b) Gestionar la interacción diaria con la comunidad, responder comentarios y moderar las conversaciones.</label><br>
+        <label><input type="radio" name="q1" value="7"> c) Definir los objetivos generales de negocio y el presupuesto de publicidad.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>2. ¿Qué herramienta fundamental permite al CM segmentar y humanizar a su audiencia para crear contenido más relevante?</strong></p>
+        <label><input type="radio" name="q2" value="correcta"> a) La creación del Buyer Persona.</label><br>
+        <label><input type="radio" name="q2" value="opcion2"> b) El Calendario Editorial.</label><br>
+        <label><input type="radio" name="q2" value="opcion3"> c) La Tasa de Engagement (TDE).</label>
+      </div>
+
+      <div class="question">
+        <p><strong>3.¿Qué característica NO corresponde a un objetivo de estrategia de contenido formulado bajo el criterio SMART?</strong></p>
+        <label><input type="radio" name="q3" value="Tupla"> a) Ser Medible (M), para poder cuantificar su progreso con métricas.</label><br>
+        <label><input type="radio" name="q3" value="Lista"> b) Ser Relativo (R) al crecimiento de la competencia directa.</label><br>
+        <label><input type="radio" name="q3" value="Conjunto"> c) Tener un Plazo de Tiempo (T), para establecer una fecha límite de cumplimiento.</label><br>
+      </div>
+
+      <div class="question">
+        <p><strong>4.Si una marca busca fidelizar a sus seguidores mostrando el lado humano de la empresa o dando consejos de valor, ¿a qué Pilar de Contenido se está enfocando principalmente?</strong></p>
+        <label><input type="radio" name="q4" value="correcta"> a) Pilar de Entretenimiento / Inspiración.</label><br>
+        <label><input type="radio" name="q4" value="opcion2"> b) Pilar de Servicio al Cliente.</label><br>
+        <label><input type="radio" name="q4" value="opcion3"> c)Pilar de Servicio al Cliente.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>5. ¿Qué elemento debe incluir obligatoriamente el Copy (texto) de una publicación para guiar a la audiencia a la acción deseada?</strong></p>
+        <label><input type="radio" name="q5" value="correcta"> a) Un Llamado a la Acción (CTA) claro.</label><br>
+        <label><input type="radio" name="q5" value="opcion2"> b) Un mínimo de 15 hashtags.</label><br>
+        <label><input type="radio" name="q5" value="opcion3"> c) Una mención a la competencia.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>6.En caso de una crisis de reputación en redes sociales, ¿cuál es el primer paso que debe tomar el Community Manager, antes de responder?</strong></p>
+        <label><input type="radio" name="q6" value="correcta"> a) Identificar la magnitud del problema y consultar el Manual de Crisis.</label><br>
+        <label><input type="radio" name="q6" value="opcion2"> b) Eliminar todos los comentarios relacionados y desactivar los comentarios de la publicación.</label><br>
+        <label><input type="radio" name="q6" value="opcion3"> c)Bloquear al usuario que generó el comentario negativo para evitar su propagación.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>7.La práctica de monitorizar las conversaciones, menciones y tendencias sobre la marca y la competencia en el entorno digital se conoce como:</strong></p>
+        <label><input type="radio" name="q7" value="correcta"> a) Escucha Activa (Social Listening).</label><br>
+        <label><input type="radio" name="q7" value="opcion2"> b) Marketing de Contenidos.</label><br>
+        <label><input type="radio" name="q7" value="opcion3"> c) Análisis de Sentimiento.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>8. ¿Cuál de estas métricas indica el porcentaje de personas que interactuaron con tu contenido (Likes, comentarios, guardados) respecto al alcance total?</strong></p>
+        <label><input type="radio" name="q8" value="correcta"> a) Tasa de Engagement (Engagement Rate).</label><br>
+        <label><input type="radio" name="q8" value="opcion2"> b) Tasa de Clics (CTR).</label><br>
+        <label><input type="radio" name="q8" value="opcion3"> c) Impresiones.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>9. ¿Cuál es el principal propósito de incluir Recomendaciones y Pasos a Seguir en un Reporte Mensual de Redes Sociales?</strong></p>
+        <label><input type="radio" name="q9" value="correcta"> a)Justificar las acciones futuras y la estrategia para el próximo mes basándose en el análisis de datos.</label><br>
+        <label><input type="radio" name="q9" value="opcion2"> b) Aumentar la extensión del reporte para justificar las horas de trabajo.</label><br>
+        <label><input type="radio" name="q9" value="opcion3"> c) Evitar tener que realizar el Análisis de Sentimiento para el mes siguiente.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>10.¿Cuál es la diferencia principal entre la métrica Alcance e Impresiones?</strong></p>
+        <label><input type="radio" name="q10" value="correcta"> a) El Alcance es el número de usuarios únicos que vieron el contenido, mientras que las Impresiones son las veces que el contenido fue mostrado.</label><br>
+        <label><input type="radio" name="q10" value="opcion2"> b) Las Impresiones miden el tráfico a un sitio web externo, mientras que el Alcance mide la permanencia en la red social.</label><br>
+        <label><input type="radio" name="q10" value="opcion3"> c) El Alcance se usa solo para publicaciones orgánicas, mientras que las Impresiones se usan solo para publicidad pagada.</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </form>
+
+   <div id="result" class="mt-3"></div>
+
+    <div class="text-center mt-3">
+      <button id="retryBtn" class="btn btn-warning" style="display:none;">Volver a intentar</button>
+      <button id="certBtn" class="btn btn-success" style="display:none;">Obtener mi certificado</button>
+    </div>
+  </main>
+
+<script>
+const totalPreguntas = 10;
+const minAprobado = 7;
+let tiempoRestante = 300; // 5 minutos
+let temporizador;
+
+const timerSpan = document.getElementById('timer');
+const quizForm = document.getElementById('quizForm');
+const result = document.getElementById('result');
+const retryBtn = document.getElementById('retryBtn');
+const certBtn = document.getElementById('certBtn');
+
+function iniciarTemporizador() {
+  clearInterval(temporizador);
+  tiempoRestante = 300;
+  temporizador = setInterval(() => {
+    let minutos = Math.floor(tiempoRestante / 60);
+    let segundos = tiempoRestante % 60;
+    timerSpan.textContent = `${minutos.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
+    tiempoRestante--;
+    if(tiempoRestante < 0){
+      clearInterval(temporizador);
+      evaluarTest(true);
+    }
+  }, 1000);
+}
+
+function resetearTest() {
+  quizForm.reset();
+  result.innerHTML = '';
+  retryBtn.style.display = 'none';
+  certBtn.style.display = 'none';
+  iniciarTemporizador();
+}
+
+quizForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  evaluarTest(false);
+});
+
+retryBtn.addEventListener('click', () => {
+  resetearTest();
+});
+
+certBtn.addEventListener('click', () => {
+  window.location.href = 'certificado.html';
+});
+
+function evaluarTest(tiempoAcabado) {
+  const respuestasCorrectas = {
+    q1:'Impar', q2:'correcta', q3:'Lista', q4:'correcta', q5:'correcta',
+    q6:'correcta', q7:'correcta', q8:'correcta', q9:'correcta', q10:'correcta'
+  };
+
+  let puntaje = 0;
+  for(let q in respuestasCorrectas){
+    const r = document.querySelector(`input[name="${q}"]:checked`);
+    if(r && r.value === respuestasCorrectas[q]){
+      puntaje++;
+    }
+  }
+
+  if(puntaje >= minAprobado){
+    result.innerHTML = `
+      <p>¡Felicidades! Puntaje: ${puntaje}/${totalPreguntas}.</p>
+      <p>Ahora puedes obtener tu certificado y tendrás la oportunidad de subir un proyecto guiado en PDF para mejorar tu perfil profesional en la bolsa de empleo de EducaciónIT.</p>
+    `;
+    localStorage.setItem("cursoCompletado", "true");
+    certBtn.style.display = 'inline-block';
+    retryBtn.style.display = 'none';
+    clearInterval(temporizador);
+  } else {
+    if(tiempoAcabado){
+      result.innerHTML = `<p>Se acabó el tiempo. Obtuviste ${puntaje}/${totalPreguntas}. Debes volver a intentar el test.</p>`;
+    } else {
+      result.innerHTML = `<p>Obtuviste ${puntaje}/${totalPreguntas}. Debes repetir el test.</p>`;
+    }
+    retryBtn.style.display = 'inline-block';
+    certBtn.style.display = 'none';
+    clearInterval(temporizador);
+  }
+}
+
+iniciarTemporizador();
+</script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

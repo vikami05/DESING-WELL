@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Evaluación Final</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="quiz-container container py-4">
+    <h2 class="text-center mb-3">Evaluación Final</h2>
+    <p class="text-center">Tienes 5 minutos para completar el test. Para aprobar con nota máxima debes obtener al menos 7 puntos.</p>
+    <div class="text-center mb-3">
+      <span>Tiempo restante: </span><span id="timer">05:00</span>
+    </div>
+
+    <form id="quizForm">
+      <!-- Preguntas -->
+      <div class="question">
+        <p><strong>1.¿Cuál de las 'V' del Big Data se refiere a la rapidez con la que se generan y deben procesar los datos, a menudo en tiempo real? </strong></p>
+        <label><input type="radio" name="q1" value="Par"> a) Velocidad</label><br>
+        <label><input type="radio" name="q1" value="Impar"> b) Volumen</label><br>
+        <label><input type="radio" name="q1" value="7"> c) Variedad</label>
+      </div>
+
+      <div class="question">
+        <p><strong>2. ¿Qué tipo de datos se caracteriza por no tener un formato predefinido y puede incluir documentos, correos electrónicos o archivos de audio y video?</strong></p>
+        <label><input type="radio" name="q2" value="correcta"> a) Datos No Estructurados </label><br>
+        <label><input type="radio" name="q2" value="opcion2"> b) Datos Estructurados </label><br>
+        <label><input type="radio" name="q2" value="opcion3"> c) Datos Semi-estructurados </label>
+      </div>
+
+      <div class="question">
+        <p><strong>3. En Machine Learning (ML), el Aprendizaje Supervisado se define porque los datos de entrenamiento:</strong></p>
+        <label><input type="radio" name="q3" value="Tupla"> a) Están etiquetados, y el modelo aprende a mapear las entradas a una salida deseada conocida. </label><br>
+        <label><input type="radio" name="q3" value="Lista"> b) Interactúan con un entorno para recibir recompensas o penalizaciones. </label><br>
+        <label><input type="radio" name="q3" value="Conjunto"> c) Vienen sin ninguna etiqueta de salida y el objetivo es encontrar patrones ocultos. </label><br>
+      </div>
+
+      <div class="question">
+        <p><strong>4. ¿Cuál es el propósito principal de un algoritmo de Clasificación en Machine Learning? </strong></p>
+        <label><input type="radio" name="q4" value="correcta"> a) Asignar una instancia a una de varias categorías discretas (ej: spam o no spam).</label><br>
+        <label><input type="radio" name="q4" value="opcion2"> b) Agrupar puntos de datos similares sin etiquetas predefinidas. </label><br>
+        <label><input type="radio" name="q4" value="opcion3"> c) Predecir un valor numérico continuo (ej: el precio de una casa). </label>
+      </div>
+
+      <div class="question">
+        <p><strong>5. ¿Qué término describe la situación en la que un modelo de Machine Learning memoriza el ruido de los datos de entrenamiento y funciona muy mal con datos nuevos y desconocidos? </strong></p>
+        <label><input type="radio" name="q5" value="correcta"> a) Sobreajuste (Overfitting) </label><br>
+        <label><input type="radio" name="q5" value="opcion2"> b) Normalización </label><br>
+        <label><input type="radio" name="q5" value="opcion3"> c) Subajuste (Underfitting) </label>
+      </div>
+
+      <div class="question">
+        <p><strong>6. ¿Cuál es la función principal del Hadoop Distributed File System (HDFS) dentro del ecosistema Hadoop?</strong></p>
+        <label><input type="radio" name="q6" value="correcta"> a) Dividir grandes archivos y almacenarlos de forma distribuida y tolerante a fallos en un clúster.</label><br>
+        <label><input type="radio" name="q6" value="opcion2"> b) Coordinar y gestionar los recursos del clúster (CPU, memoria).</label><br>
+        <label><input type="radio" name="q6" value="opcion3"> c) Ejecutar consultas SQL de alta velocidad sobre grandes volúmenes de datos.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>7. El modelo de programación MapReduce divide el procesamiento de datos en dos fases principales, que son: </strong></p>
+        <label><input type="radio" name="q7" value="correcta"> a) Mapeo (Map) y Reducción (Reduce)</label><br>
+        <label><input type="radio" name="q7" value="opcion2"> b) Carga y Descarga</label><br>
+        <label><input type="radio" name="q7" value="opcion3"> c) Transformación y Validación </label>
+      </div>
+
+      <div class="question">
+        <p><strong>8. ¿Cuál es la ventaja de rendimiento clave de Apache Spark sobre el modelo tradicional de MapReduce de Hadoop? </strong></p>
+        <label><input type="radio" name="q8" value="correcta"> a) Realiza la mayoría de las operaciones de procesamiento directamente en la memoria RAM del clúster. </label><br>
+        <label><input type="radio" name="q8" value="opcion2"> b) Utiliza únicamente discos duros mecánicos (HDD) para todas sus operaciones. </label><br>
+        <label><input type="radio" name="q8" value="opcion3"> c) Está limitado a procesar solo datos estructurados. </label>
+      </div>
+
+      <div class="question">
+        <p><strong>9. ¿Qué tipo de base de datos NoSQL es ideal para almacenar y consultar relaciones altamente interconectadas, como las que se encuentran en las redes sociales o sistemas de recomendación?</strong></p>
+        <label><input type="radio" name="q9" value="correcta"> a) Base de Datos de Grafos (ej: Neo4j) </label><br>
+        <label><input type="radio" name="q9" value="opcion2"> b) Base de Datos de Grafos (ej: Neo4j)</label><br>
+        <label><input type="radio" name="q9" value="opcion3"> c) Base de Datos Documental (ej: MongoDB) </label> 
+      </div>
+
+      <div class="question">
+        <p><strong>10. Desde la perspectiva de la Inteligencia Artificial, ¿cuál es el rol fundamental del Big Data?</strong></p>
+        <label><input type="radio" name="q10" value="correcta"> a) Actúa como la materia prima o el 'combustible' necesario para entrenar modelos de Machine Learning y Deep Learning.</label><br>
+        <label><input type="radio" name="q10" value="opcion2"> b) Es el único desafío técnico que debe resolver la IA.</label><br>
+        <label><input type="radio" name="q10" value="opcion3"> c) Reemplaza por completo la necesidad de desarrollar algoritmos de IA. </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </form>
+
+   <div id="result" class="mt-3"></div>
+
+    <div class="text-center mt-3">
+      <button id="retryBtn" class="btn btn-warning" style="display:none;">Volver a intentar</button>
+      <button id="certBtn" class="btn btn-success" style="display:none;">Obtener mi certificado</button>
+    </div>
+  </main>
+
+ <script>
+const totalPreguntas = 10;
+const minAprobado = 7;
+let tiempoRestante = 300; // 5 minutos
+let temporizador;
+const timerSpan = document.getElementById('timer');
+const quizForm = document.getElementById('quizForm');
+const result = document.getElementById('result');
+const retryBtn = document.getElementById('retryBtn');
+const certBtn = document.getElementById('certBtn');
+
+function iniciarTemporizador() {
+  clearInterval(temporizador);
+  tiempoRestante = 300;
+  temporizador = setInterval(() => {
+    let minutos = Math.floor(tiempoRestante / 60);
+    let segundos = tiempoRestante % 60;
+    timerSpan.textContent = `${minutos.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
+    tiempoRestante--;
+    if(tiempoRestante < 0){
+      clearInterval(temporizador);
+      evaluarTest(true);
+    }
+  }, 1000);
+}
+
+function resetearTest() {
+  quizForm.reset();
+  result.innerHTML = '';
+  retryBtn.style.display = 'none';
+  certBtn.style.display = 'none';
+  iniciarTemporizador();
+}
+
+quizForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  evaluarTest(false);
+});
+
+retryBtn.addEventListener('click', () => {
+  resetearTest();
+});
+
+certBtn.addEventListener('click', () => {
+  window.location.href = 'certificado.html';
+});
+
+function evaluarTest(tiempoAcabado) {
+  const respuestasCorrectas = {
+    q1:'Impar', q2:'correcta', q3:'Lista', q4:'correcta', q5:'correcta',
+    q6:'correcta', q7:'correcta', q8:'correcta', q9:'correcta', q10:'correcta'
+  };
+
+  let puntaje = 0;
+
+  for(let q in respuestasCorrectas){
+    const r = document.querySelector(`input[name="${q}"]:checked`);
+    if(r && r.value === respuestasCorrectas[q]){
+      puntaje++;
+    }
+  }
+
+  if(puntaje >= minAprobado){
+    result.innerHTML = `
+      <p>¡Felicidades! Puntaje: ${puntaje}/${totalPreguntas}.</p>
+      <p>Ahora puedes obtener tu certificado y tendrás la oportunidad de subir un proyecto guiado en PDF para mejorar tu perfil profesional en la bolsa de empleo de EducaciónIT.</p>
+    `;
+    // ✅ Guardar estado de curso completado en localStorage
+    localStorage.setItem("cursoCompletado", "true");
+
+    certBtn.style.display = 'inline-block';
+    retryBtn.style.display = 'none';
+    clearInterval(temporizador);
+  } else {
+    if(tiempoAcabado){
+      result.innerHTML = `<p>Se acabó el tiempo. Obtuviste ${puntaje}/${totalPreguntas}. Debes volver a intentar el test.</p>`;
+    } else {
+      result.innerHTML = `<p>Obtuviste ${puntaje}/${totalPreguntas}. Debes repetir el test.</p>`;
+    }
+    retryBtn.style.display = 'inline-block';
+    certBtn.style.display = 'none';
+    clearInterval(temporizador);
+  }
+}
+
+// Iniciar la primera vez
+iniciarTemporizador();
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

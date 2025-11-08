@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Evaluación Final</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="quiz-container container py-4">
+    <h2 class="text-center mb-3">Evaluación Final</h2>
+    <p class="text-center">Tienes 5 minutos para completar el test. Para aprobar con nota máxima debes obtener al menos 7 puntos.</p>
+    <div class="text-center mb-3">
+      <span>Tiempo restante: </span><span id="timer">05:00</span>
+    </div>
+
+    <form id="quizForm">
+      <!-- Preguntas -->
+      <div class="question">
+        <p><strong>1.¿Cuál es el objetivo principal del Marketing de Contenidos como estrategia de atracción?</strong></p>
+        <label><input type="radio" name="q1" value="Par"> a) Vender directamente productos o servicios en cada pieza de contenido.</label><br>
+        <label><input type="radio" name="q1" value="Impar"> b) Crear y compartir contenido relevante para atraer y retener una audiencia claramente definida.</label><br>
+        <label><input type="radio" name="q1" value="7"> c) Publicar la mayor cantidad de contenido posible en el menor tiempo.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>2. En el Viaje del Comprador (Buyer's Journey), ¿qué etapa se enfoca en que el potencial cliente comience a investigar posibles soluciones a su problema?</strong></p>
+        <label><input type="radio" name="q2" value="correcta"> a) Consideración.</label><br>
+        <label><input type="radio" name="q2" value="opcion2"> b) Decisión.</label><br>
+        <label><input type="radio" name="q2" value="opcion3"> c) Conocimiento.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>3.¿Qué componente de la metodología SMART (Específico, Medible, Alcanzable, Relevante, Temporal) se utiliza para asegurar que un objetivo de contenido se pueda cuantificar?</strong></p>
+        <label><input type="radio" name="q3" value="Tupla"> a) Relevante (R).</label><br>
+        <label><input type="radio" name="q3" value="Lista"> b) Medible (M).</label><br>
+        <label><input type="radio" name="q3" value="Conjunto"> c) Específico (S).</label><br>
+      </div>
+
+      <div class="question">
+        <p><strong>4. ¿Cuál es la principal función de un Calendario Editorial en la planificación del contenido?</strong></p>
+        <label><input type="radio" name="q4" value="correcta"> a) Asegurar la consistencia y organización de las fechas de publicación y los temas.</label><br>
+        <label><input type="radio" name="q4" value="opcion2"> b) Definir el presupuesto exacto para la promoción pagada.</label><br>
+        <label><input type="radio" name="q4" value="opcion3"> c) Medir el Retorno de la Inversión (ROI) de la estrategia.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>5.Dentro del SEO On-Page para un artículo de blog, ¿cuál es el uso más importante que se le debe dar a la etiqueta $\text{H1}$?</strong></p>
+        <label><input type="radio" name="q5" value="correcta"> a) Usarla como el título principal del artículo, conteniendo la palabra clave central.</label><br>
+        <label><input type="radio" name="q5" value="opcion2"> b) Insertar un CTA (Llamada a la Acción) invisible para los lectores.</label><br>
+        <label><input type="radio" name="q5" value="opcion3"> c) Repetir la palabra clave de manera forzada varias veces.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>6. El Storytelling en el Marketing de Contenidos tiene como objetivo principal:</strong></p>
+        <label><input type="radio" name="q6" value="correcta"> a) Establecer una conexión emocional y hacer que el mensaje sea memorable.</label><br>
+        <label><input type="radio" name="q6" value="opcion2"> b) Reemplazar completamente el uso de datos y estadísticas en el contenido.</label><br>
+        <label><input type="radio" name="q6" value="opcion3"> c) Garantizar automáticamente la viralidad del contenido.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>7.¿Qué técnica avanzada de distribución se enfoca en conseguir enlaces externos de sitios web de alta autoridad (backlinks) para mejorar el posicionamiento SEO?</strong></p>
+        <label><input type="radio" name="q7" value="correcta"> a) Link Building (SEO Off-Page).</label><br>
+        <label><input type="radio" name="q7" value="opcion2"> b) Optimización del H1(SEO On-Page).</label><br>
+        <label><input type="radio" name="q7" value="opcion3"> c) Publicación de historias en Instagram.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>8.¿Qué se entiende por la técnica de Repropósito de Contenido (Content Repurposing)?</strong></p>
+        <label><input type="radio" name="q8" value="correcta"> a) Convertir una sola pieza de contenido (ej. un webinar) en múltiples formatos (ej. clips, artículos).</label><br>
+        <label><input type="radio" name="q8" value="opcion2"> b) Traducir el contenido a otros idiomas para audiencias internacionales.</label><br>
+        <label><input type="radio" name="q8" value="opcion3"> c) Eliminar el contenido antiguo que no generó conversiones.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>9.¿Cuál de estas métricas es la más adecuada para medir el compromiso (engagement) y la calidad de un artículo de blog?</strong></p>
+        <label><input type="radio" name="q9" value="correcta"> a) Tasa de Rebote (Bounce Rate).</label><br>
+        <label><input type="radio" name="q9" value="opcion2"> b) Número total de suscriptores al newsletter.</label><br>
+        <label><input type="radio" name="q9" value="opcion3"> c) Costo por Adquisición (CPA).</label>
+      </div>
+
+      <div class="question">
+        <p><strong>10.¿Cuál es el indicador definitivo de que la estrategia de Marketing de Contenidos está siendo rentable y exitosa a nivel de negocio?</strong></p>
+        <label><input type="radio" name="q10" value="correcta"> a) El Retorno de la Inversión (ROI).</label><br>
+        <label><input type="radio" name="q10" value="opcion2"> b) El promedio de comentarios por artículo.</label><br>
+        <label><input type="radio" name="q10" value="opcion3"> c) El número de seguidores en redes sociales.</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </form>
+
+   <div id="result" class="mt-3"></div>
+
+    <div class="text-center mt-3">
+      <button id="retryBtn" class="btn btn-warning" style="display:none;">Volver a intentar</button>
+      <button id="certBtn" class="btn btn-success" style="display:none;">Obtener mi certificado</button>
+    </div>
+  </main>
+
+ <script>
+const totalPreguntas = 10;
+const minAprobado = 7;
+let tiempoRestante = 300; // 5 minutos
+let temporizador;
+const timerSpan = document.getElementById('timer');
+const quizForm = document.getElementById('quizForm');
+const result = document.getElementById('result');
+const retryBtn = document.getElementById('retryBtn');
+const certBtn = document.getElementById('certBtn');
+
+function iniciarTemporizador() {
+  clearInterval(temporizador);
+  tiempoRestante = 300;
+  temporizador = setInterval(() => {
+    let minutos = Math.floor(tiempoRestante / 60);
+    let segundos = tiempoRestante % 60;
+    timerSpan.textContent = `${minutos.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
+    tiempoRestante--;
+    if (tiempoRestante < 0) {
+      clearInterval(temporizador);
+      evaluarTest(true);
+    }
+  }, 1000);
+}
+
+function resetearTest() {
+  quizForm.reset();
+  result.innerHTML = '';
+  retryBtn.style.display = 'none';
+  certBtn.style.display = 'none';
+  iniciarTemporizador();
+}
+
+quizForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  evaluarTest(false);
+});
+
+retryBtn.addEventListener('click', () => {
+  resetearTest();
+});
+
+certBtn.addEventListener('click', () => {
+  window.location.href = 'certificado.html';
+});
+
+function evaluarTest(tiempoAcabado) {
+  const respuestasCorrectas = {
+    q1:'Impar', q2:'correcta', q3:'Lista', q4:'correcta', q5:'correcta',
+    q6:'correcta', q7:'correcta', q8:'correcta', q9:'correcta', q10:'correcta'
+  };
+
+  let puntaje = 0;
+
+  for (let q in respuestasCorrectas) {
+    const r = document.querySelector(`input[name="${q}"]:checked`);
+    if (r && r.value === respuestasCorrectas[q]) {
+      puntaje++;
+    }
+  }
+
+  if (puntaje >= minAprobado) {
+    result.innerHTML = `
+      <p>¡Felicidades! Puntaje: ${puntaje}/${totalPreguntas}.</p>
+      <p>Ahora puedes obtener tu certificado y tendrás la oportunidad de subir un proyecto guiado en PDF para mejorar tu perfil profesional en la bolsa de empleo de EducaciónIT.</p>
+    `;
+    // ✅ Guardar estado de curso completado en localStorage
+    localStorage.setItem("cursoCompletado", "true");
+
+    certBtn.style.display = 'inline-block';
+    retryBtn.style.display = 'none';
+    clearInterval(temporizador);
+  } else {
+    if (tiempoAcabado) {
+      result.innerHTML = `<p>Se acabó el tiempo. Obtuviste ${puntaje}/${totalPreguntas}. Debes volver a intentar el test.</p>`;
+    } else {
+      result.innerHTML = `<p>Obtuviste ${puntaje}/${totalPreguntas}. Debes repetir el test.</p>`;
+    }
+    retryBtn.style.display = 'inline-block';
+    certBtn.style.display = 'none';
+    clearInterval(temporizador);
+  }
+}
+
+// Iniciar la primera vez
+iniciarTemporizador();
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

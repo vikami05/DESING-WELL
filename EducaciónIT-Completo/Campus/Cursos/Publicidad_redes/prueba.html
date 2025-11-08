@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Evaluación Final</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="quiz-container container py-4">
+    <h2 class="text-center mb-3">Evaluación Final</h2>
+    <p class="text-center">Tienes 5 minutos para completar el test. Para aprobar con nota máxima debes obtener al menos 7 puntos.</p>
+    <div class="text-center mb-3">
+      <span>Tiempo restante: </span><span id="timer">05:00</span>
+    </div>
+
+    <form id="quizForm">
+      <!-- Preguntas -->
+      <div class="question">
+        <p><strong>1.Si el objetivo principal de una empresa es que el mayor número de personas dentro de su público objetivo conozca su nueva marca, ¿cuál de los siguientes objetivos de campaña en plataformas de publicidad es el más adecuado?</strong></p>
+        <label><input type="radio" name="q1" value="Par"> a) Conversiones/Ventas.</label><br>
+        <label><input type="radio" name="q1" value="Impar"> b) Conocimiento/Alcance.</label><br>
+        <label><input type="radio" name="q1" value="7"> c) Tráfico al sitio web.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>2. En la estructura jerárquica de una campaña publicitaria en redes sociales (Campaña, Conjunto de Anuncios, Anuncio), ¿en qué nivel se establece generalmente el presupuesto diario y el público objetivo?</strong></p>
+        <label><input type="radio" name="q2" value="correcta"> a) Nivel de Conjunto de Anuncios.</label><br>
+        <label><input type="radio" name="q2" value="opcion2"> b) Nivel de Campaña.</label><br>
+        <label><input type="radio" name="q2" value="opcion3"> c)Nivel de Anuncio.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>3.¿Qué tipo de audiencia se crea utilizando los datos de origen propios, como una lista de correos electrónicos de clientes existentes o la información de usuarios que han visitado una página específica de tu sitio web (a través del píxel)?</strong></p>
+        <label><input type="radio" name="q3" value="Tupla"> a) Audiencia Similar (Lookalike).</label><br>
+        <label><input type="radio" name="q3" value="Lista"> b) Audiencia Personalizada.</label><br>
+        <label><input type="radio" name="q3" value="Conjunto"> c)Audiencia Guardada (por intereses).</label><br>
+      </div>
+
+      <div class="question">
+        <p><strong>4. ¿Cuál es la finalidad principal de crear una Audiencia Similar (Lookalike) en tu estrategia de segmentación?</strong></p>
+        <label><input type="radio" name="q4" value="correcta"> a) Encontrar nuevos usuarios con características e intereses parecidos a tu mejor audiencia de origen.</label><br>
+        <label><input type="radio" name="q4" value="opcion2"> b) Excluir a los usuarios que ya realizaron una compra reciente.</label><br>
+        <label><input type="radio" name="q4" value="opcion3"> c)Reimpactar a las personas que abandonaron el carrito de compra.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>5.¿Cuál es la razón fundamental para realizar una Prueba A/B (Split Test) entre dos versiones de un mismo anuncio (ej. cambiar solo la imagen) antes de escalar la campaña?</strong></p>
+        <label><input type="radio" name="q5" value="correcta"> a) Determinar qué elemento específico (imagen, texto, CTA) genera el mejor rendimiento (ej. mayor CTR o menor CPA).</label><br>
+        <label><input type="radio" name="q5" value="opcion2"> b) Asegurar que la campaña tenga un alcance del $100\%$.</label><br>
+        <label><input type="radio" name="q5" value="opcion3"> c) Duplicar el presupuesto de la campaña de manera segura.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>6. ¿Qué elemento del copy publicitario es crucial para indicarle al usuario qué acción específica debe tomar inmediatamente después de ver el anuncio?</strong></p>
+        <label><input type="radio" name="q6" value="correcta"> a) El Llamada a la Acción (CTA).</label><br>
+        <label><input type="radio" name="q6" value="opcion2"> b) El Titular del texto largo.</label><br>
+        <label><input type="radio" name="q6" value="opcion3"> c)La Métrica de ROAS.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>7.Si tu campaña de publicidad generó $\$500$ en ventas e invertiste $\$100$ en el anuncio, ¿cuál es el valor de tu ROAS (Retorno de la Inversión Publicitaria)?</strong></p>
+        <label><input type="radio" name="q7" value="correcta"> a) 5</label><br>
+        <label><input type="radio" name="q7" value="opcion2"> b)0.2</label><br>
+        <label><input type="radio" name="q7" value="opcion3"> c) 400</label>
+      </div>
+
+      <div class="question">
+        <p><strong>8. ¿Cuál de las siguientes métricas se utiliza principalmente para medir la relevancia del anuncio y el interés del público en la creatividad?</strong></p>
+        <label><input type="radio" name="q8" value="correcta"> a) CTR (Tasa de Clics).</label><br>
+        <label><input type="radio" name="q8" value="opcion2"> b) CPM (Costo por Mil Impresiones).</label><br>
+        <label><input type="radio" name="q8" value="opcion3"> c) CPA (Costo por Adquisición).</label>
+      </div>
+
+      <div class="question">
+        <p><strong>9. En una estrategia de Full Funnel Retargeting (Embudo Completo), ¿qué grupo de audiencia se encuentra más abajo en el embudo y está más cerca de la conversión final?</strong></p>
+        <label><input type="radio" name="q9" value="correcta"> a) Audiencia Similar al 1%.</label><br>
+        <label><input type="radio" name="q9" value="opcion2"> b) Personas que añadieron un producto al carrito pero no compraron.</label><br>
+        <label><input type="radio" name="q9" value="opcion3"> c) Personas que vieron un video de marca al 25%.</label>
+      </div>
+
+      <div class="question">
+        <p><strong>10.¿Qué fenómeno avanzado describe la disminución progresiva del rendimiento (aumento del CPA y disminución del CTR) cuando una audiencia ve el mismo anuncio con demasiada frecuencia?</strong></p>
+        <label><input type="radio" name="q10" value="correcta"> a) Fatiga Creativa (Creative Fatigue).</label><br>
+        <label><input type="radio" name="q10" value="opcion2"> b) Segmentación Abierta (Broad Targeting).</label><br>
+        <label><input type="radio" name="q10" value="opcion3"> c) Escalamiento Vertical.</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+    </form>
+
+   <div id="result" class="mt-3"></div>
+
+    <div class="text-center mt-3">
+      <button id="retryBtn" class="btn btn-warning" style="display:none;">Volver a intentar</button>
+      <button id="certBtn" class="btn btn-success" style="display:none;">Obtener mi certificado</button>
+    </div>
+  </main>
+
+<script>
+const totalPreguntas = 10;
+const minAprobado = 7;
+let tiempoRestante = 300; // 5 minutos
+let temporizador;
+const timerSpan = document.getElementById('timer');
+const quizForm = document.getElementById('quizForm');
+const result = document.getElementById('result');
+const retryBtn = document.getElementById('retryBtn');
+const certBtn = document.getElementById('certBtn');
+
+function iniciarTemporizador() {
+  clearInterval(temporizador);
+  tiempoRestante = 300;
+  temporizador = setInterval(() => {
+    let minutos = Math.floor(tiempoRestante / 60);
+    let segundos = tiempoRestante % 60;
+    timerSpan.textContent = `${minutos.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
+    tiempoRestante--;
+    if(tiempoRestante < 0){
+      clearInterval(temporizador);
+      evaluarTest(true);
+    }
+  }, 1000);
+}
+
+function resetearTest() {
+  quizForm.reset();
+  result.innerHTML = '';
+  retryBtn.style.display = 'none';
+  certBtn.style.display = 'none';
+  iniciarTemporizador();
+}
+
+quizForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  evaluarTest(false);
+});
+
+retryBtn.addEventListener('click', () => {
+  resetearTest();
+});
+
+certBtn.addEventListener('click', () => {
+  window.location.href = 'certificado.html';
+});
+
+function evaluarTest(tiempoAcabado) {
+  const respuestasCorrectas = {
+    q1:'Impar', q2:'correcta', q3:'Lista', q4:'correcta', q5:'correcta',
+    q6:'correcta', q7:'correcta', q8:'correcta', q9:'correcta', q10:'correcta'
+  };
+
+  let puntaje = 0;
+
+  for(let q in respuestasCorrectas){
+    const r = document.querySelector(`input[name="${q}"]:checked`);
+    if(r && r.value === respuestasCorrectas[q]){
+      puntaje++;
+    }
+  }
+
+  if(puntaje >= minAprobado){
+    result.innerHTML = `
+      <p>¡Felicidades! Puntaje: ${puntaje}/${totalPreguntas}.</p>
+      <p>Ahora puedes obtener tu certificado y tendrás la oportunidad de subir un proyecto guiado en PDF para mejorar tu perfil profesional en la bolsa de empleo de EducaciónIT.</p>
+    `;
+    // ✅ Guardar estado de curso completado en localStorage
+    localStorage.setItem("cursoCompletado", "true");
+
+    certBtn.style.display = 'inline-block';
+    retryBtn.style.display = 'none';
+    clearInterval(temporizador);
+  } else {
+    if(tiempoAcabado){
+      result.innerHTML = `<p>Se acabó el tiempo. Obtuviste ${puntaje}/${totalPreguntas}. Debes volver a intentar el test.</p>`;
+    } else {
+      result.innerHTML = `<p>Obtuviste ${puntaje}/${totalPreguntas}. Debes repetir el test.</p>`;
+    }
+    retryBtn.style.display = 'inline-block';
+    certBtn.style.display = 'none';
+    clearInterval(temporizador);
+  }
+}
+
+// Iniciar la primera vez
+iniciarTemporizador();
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
